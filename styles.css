@@ -32,6 +32,76 @@ body{
     height: 100%;
     width: 100%;
 }
+
+.navbar{
+    background: darkblue;
+    grid-area: nav;
+}
+ 
+.navbar__content{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 0 0 80px;
+
+    animation: 2s   navbar  0.5s  ease-in-out;
+}
+
+
+@keyframes navbar
+{
+    0% {
+        transform: translateY(-200px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.navbar__content img{
+    width: 50px;
+}
+
+.navbar__content ul{
+    display: flex;
+    /* Space between each element list */
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    width: 450px;
+}
+.navbar__content ul li a{
+    color: var(--red);
+    font-weight: 1.  00;
+    text-decoration: none;
+}
+
+.main-content{
+    display: flex;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .loader{
     background: white;
     width: 100%;
@@ -43,7 +113,7 @@ body{
     /* positioning in order */
     z-index: 3;
                         /* linear aceleration */
-    animation: loader 2s linear forwards;
+    animation: loader 0.2s linear forwards;
                                 /*To stay in your final state  */
 }
 
