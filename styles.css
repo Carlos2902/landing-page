@@ -353,13 +353,7 @@ body{
     
 }
 
-.hidden{
-    display: none;
-}
 
-.visible{
-    display: grid;
-}
 
 .modal{
     width: 100%;
@@ -368,4 +362,21 @@ body{
     position: absolute;
     z-index: 4;
 
+    display: grid;
+    place-items: center;
+}
+
+.hidden{
+    /* display grid wins because specificity orders, so important is implemented */
+    display: none !important; 
+}
+
+.visible{
+    display: grid   !important;
+}
+
+.modal__content{
+    background: white;
+    width: 50%;
+    height: 50%;
 }
