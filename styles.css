@@ -41,6 +41,7 @@ body{
     
     grid-area: nav;
     display: flex;
+    background-color: #ffd602;
 }
  
 .navbar__content{
