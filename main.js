@@ -4,6 +4,7 @@ const closeIcon = document.querySelector('.modal__content--close');
 
 
 closeIcon.addEventListener('click',closeIconDisplay);
+document.addEventListener('keydown', closeIconKeyEsc);
 spidermanButton.addEventListener('click', modalDisplay);
 
 
@@ -13,10 +14,16 @@ function closeIconDisplay(){
 };
 
 
+function closeIconKeyEsc(event) {
+    if (event.key === 'Escape' || event.keyCode === 27) {
+        modal.classList.add('hidden');
+        modal.classList.remove('visible');
+    }
+}
+
 function modalDisplay(){
     modal.classList.remove('hidden');
     modal.classList.add('visible');
-    
-    
-    closeIcon();
 };
+
+
