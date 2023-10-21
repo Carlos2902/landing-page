@@ -8,7 +8,6 @@ spidermanButton.addEventListener('click', modalDisplay);
 
 
 function closeIconDisplay(){
-        console.log('here');
         modal.classList.add('hidden');
         modal.classList.remove('visible');
 };

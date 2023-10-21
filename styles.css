@@ -42,6 +42,8 @@ body{
     grid-area: nav;
     display: flex;
     background-color: #ffd602;
+    display: flex;
+    width: 100%;
 }
  
 .navbar__content{
@@ -292,7 +294,7 @@ body{
     /* positioning in order */
     z-index: 3;
                         /* linear aceleration */
-    animation: loader 0.2s linear forwards;
+    animation: loader 1.4s linear forwards;
                                 /*To stay in your final state  */
 }
 
@@ -368,13 +370,14 @@ body{
 }
 
 .hidden{
-    /* display grid wins because specificity orders, so important is implemented */
+    /* display grid wins because of the specificity orders, so important is implemented */
     display: none !important; 
 }
 
 .visible{
     display: grid   !important;
 }
+
 
 .modal__content{
     background: white;
@@ -383,34 +386,51 @@ body{
 
     display: grid;
     place-items: center;
+
+    position: relative;  /*positioning context for the childs*/
 }
 
+.modal__content--close{
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+#radio-1,#radio-2,#radio-3{
+    display: none;
+}
 
 .modal__content--slider{
     /* rectangular shape */
-    width: 300px;
-    height: 200px;
+    width: 350px;
+    height: 260px;
 
-    /* to get to see the cards beside in 3d animation*/
+    /* to get to see the cards beside one another in 3d animation*/
     transform-style: preserve-3d;
 }
 
+
 .cards{
-    position: relative;
+    position: relative;   /* To control child positioning */
     width: 100%;
     height: 100%;
+
+    
 }
 
+/* Style for each card */
 .card{
     background: var(--yellow);
     position: absolute;
+    /* Center */
     left: 0;
     right: 0;
     margin: 0 auto;
-
+        /* transform elements, 0.4s duration, acceleration ease  */
     transition: transform 0.4s ease;
     cursor: pointer;
-
+    /* Center the content inside of card container */
     display: grid;
     place-items: center;
 
@@ -418,6 +438,12 @@ body{
     width: 50%;
 }
 
+.card img{
+max-width: 100%; /* Make the image as wide as its container */
+  max-height: 100%; /* Make the image as tall as its container */
+  width: auto; /* Automatically adjust the image width */
+  height: auto;
+}
 
 #radio-1:checked ~ .cards #card-1,
 #radio-2:checked ~ .cards #card-2,
