@@ -2,9 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    max-width: 250%;
+    max-width: 250%;}
+
+.top-theme-nav{
+    width: 100px;
 }
 
-.col{
-    width: 33.33%;
-}
+
+
