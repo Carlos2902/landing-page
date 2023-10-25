@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    max-width: 250%;}
+
+    /* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+
+.navbar{
+
+  background-color: #ffd602;
+  width: 100%;
+}
+.navbar__content {
+  width: 100%;
+  display: inline-flex;
+  padding-left: 80px; 
+  margin-top: 80px;
+  margin-bottom: 80px;
+
+
+}
+
+.navbar__content img {
+  width: 50px;
+  margin-right: 10px; 
+}
+
+.navbar__content ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+  width: 450px;
+  align-items: center; 
+}
+
+.search-container form {
+  
+  background-color:#fff ;
+  display: flex;
+  margin-top: 20px; 
+  border: 1px solid; 
+  border-radius: 20px; 
+  padding: 10px; 
+}
+
+
+.search-container button {
+  border: none;
+  background-color: #fff; 
+  color: #000; 
+  border-radius: 20px; 
+  margin-left: 5px; 
+}
+
+.buttons-container{
+  display: flex;
+  margin-left: 380px;
+}
+#log-in,
+#menu-ham {
+  background-color: #fff; 
+  border: none;
+  border-radius: 10px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 0px;
+
+  
+}
+
+#log-in a,
+#menu-ham a {
+  text-decoration: none; 
+  color: #000;
+}
+
+
+
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 200%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }

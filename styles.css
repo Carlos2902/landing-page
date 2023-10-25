@@ -5,11 +5,14 @@
     --red: #d5040a;
     --blue: #016db6;
 }
-
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    max-width: 250%;}
 
 body{
     font-family: 'Lato', sans-serif;
-    height: 100vh;
     margin: 0;
     overflow: hidden;
 }
@@ -49,7 +52,7 @@ body{
 .navbar__content{
     display: flex;
     align-items: center;
-    width: 100%;
+    max-width: 250%;
     padding: 0 0 0 80px;
 
     animation: 2s   navbar  0.5s  ease-in-out;
