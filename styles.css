@@ -177,7 +177,7 @@ body{
 @keyframes side-content-img {
     0%{
         /* It comes from -1000px */
-        transform: translateX(1000px);
+        transform: translateX(-1000px);
     }
 
     100%{
@@ -355,6 +355,11 @@ body{
     }
     
 }
+
+
+
+
+
 
 
 
