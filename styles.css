@@ -481,3 +481,128 @@ max-width: 100%; /* Make the image as wide as its container */
 
 
 
+
+
+
+
+.modalNw{
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 4;
+
+    display: grid;
+    place-items: center;
+}
+
+.hiddenNw{
+    /* display grid wins because of the specificity orders, so important is implemented */
+    display: none !important; 
+}
+
+.visibleNw{
+    display: grid   !important;
+}
+
+
+.modalNw__content{
+    background: white;
+    width: 50%;
+    height: 50%;
+
+    display: grid;
+    place-items: center;
+
+    position: relative;  /*positioning context for the childs*/
+}
+
+.modalNw__content--close{
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+/* #radio-1,#radio-2,#radio-3{
+    display: none;
+} */
+
+.modalNw__content--slider{
+    /* rectangular shape */
+    width: 350px;
+    height: 260px;
+
+    /* to get to see the cards beside one another in 3d animation*/
+    transform-style: preserve-3d;
+}
+
+.cardsNw{
+    position: relative;   /* To control child positioning */
+    width: 100%;
+    height: 100%;
+
+    
+}
+
+.modalNw__content--slider{
+    /* rectangular shape */
+    width: 350px;
+    height: 260px;
+
+    /* to get to see the cards beside one another in 3d animation*/
+    transform-style: preserve-3d;
+}
+.cardNw{
+    background: var(--white);
+    position: absolute;
+    /* Center */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+        /* transform elements, 0.4s duration, acceleration ease  */
+    transition: transform 0.4s ease;
+    cursor: pointer;
+    /* Center the content inside of card container */
+    display: grid;
+    place-items: center;
+
+    height: 100%;
+    width: 50%;
+}
+
+.cardNw img{
+    max-width: 100%; /* Make the image as wide as its container */
+      max-height: 100%; /* Make the image as tall as its container */
+      width: auto; /* Automatically adjust the image width */
+      height: auto;
+    }
+    
+    #radio-1nw:checked ~ .cardsNw #card-1nw,
+    #radio-2nw:checked ~ .cardsNw #card-2nw,
+    #radio-3nw:checked ~ .cardsNw #card-3nw{
+        transform: translateX(0) scale(1);
+        opacity: 1;
+        z-index: 1;
+    }
+    
+    #radio-1nw:checked ~ .cardsNw #card-2nw,
+    #radio-2nw:checked ~ .cardsNw #card-3nw,
+    #radio-3nw:checked ~ .cardsNw #card-1nw{
+        transform: translateX(40%) scale(0.8);
+        opacity: 0.5;
+        z-index: 0;
+    }
+    
+    
+    #radio-1nw:checked ~ .cardsNw #card-3nw,
+    #radio-2nw:checked ~ .cardsNw #card-1nw,
+    #radio-3nw:checked ~ .cardsNw #card-2nw{
+        transform: translateX(-40%) scale(0.8);
+        opacity: 0.5;
+        z-index: 0;
+    }
+
+    #radio-1nw,#radio-2nw,#radio-3nw{
+        display: none;
+    }
