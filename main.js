@@ -40,12 +40,26 @@ const closeIconNw = document.querySelector('.modalNw__content--close');
 
 nightwingButton.addEventListener('click', modalDisplayNw);
 
-function closeIconKeyEscNw(event) {
+const nightwingFunFacts = [
+    "Nightwing was originally the first Robin, Dick Grayson, before taking on the Nightwing identity.",
+    "Dick Grayson/Nightwing is known for his acrobatic skills and martial arts expertise.",
+    "Nightwing has been a member of various superhero teams, including the Teen Titans and the Justice League.",
+    "His blue and black costume as Nightwing is iconic in the DC Universe.",
+  ];
+  
+  function getRandomNightwingFunFact() {
+    const randomIndex = Math.floor(Math.random() * nightwingFunFacts.length);
+    return nightwingFunFacts[randomIndex];
+  }
+  
+  function closeIconKeyEscNw(event) {
     if (event.key === 'Escape' || event.keyCode === 27) {
-        modalNw.classList.add('hidden');
-        modalNw.classList.remove('visible');
+      modalNw.classList.add('hidden');
+      modalNw.classList.remove('visible');
+      const nightwingFunFact = getRandomNightwingFunFact();
+      alert('Fun fact! \n' + nightwingFunFact);
     }
-}
+  }
 
 closeIconNw.addEventListener('click',closeIconDisplayNw);
 document.addEventListener('keydown', closeIconKeyEscNw);
