@@ -3,15 +3,15 @@
 */
 
 const spidermanButton = document.querySelector('#spider-button1');
-const modal = document.querySelector('.modal');
+const modalSpiderman = document.querySelector('.modalSpiderman');
 const closeIcon = document.querySelector('.modal__content--close');
 
 spidermanButton.addEventListener('click', modalDisplay);
 
 function closeIconKeyEsc(event) {
     if (event.key === 'Escape' || event.keyCode === 27) {
-        modal.classList.add('hidden');
-        modal.classList.remove('visible');
+        modalSpiderman.classList.add('hidden');
+        modalSpiderman.classList.remove('visible');
     }
 }
 
@@ -19,14 +19,14 @@ closeIcon.addEventListener('click',closeIconDisplay);
 document.addEventListener('keydown', closeIconKeyEsc);
 
 function closeIconDisplay(){
-        modal.classList.add('hidden');
-        modal.classList.remove('visible');
+        modalSpiderman.classList.add('hidden');
+        modalSpiderman.classList.remove('visible');
 };
 
 
 function modalDisplay(){
-    modal.classList.remove('hidden');
-    modal.classList.add('visible');
+    modalSpiderman.classList.remove('hidden');
+    modalSpiderman.classList.add('visible');
 };
 
 /*
