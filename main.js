@@ -4,7 +4,7 @@
 
 const spidermanButton = document.querySelector('#spider-button1');
 const modalSpiderman = document.querySelector('.modalSpiderman');
-const closeIcon = document.querySelector('.modal__content--close');
+const closeIconSpiderman = document.querySelector('.modal__content--close');
 
 spidermanButton.addEventListener('click', modalDisplay);
 
@@ -15,7 +15,7 @@ function closeIconKeyEsc(event) {
     }
 }
 
-closeIcon.addEventListener('click',closeIconDisplay);
+closeIconSpiderman.addEventListener('click',closeIconDisplay);
 document.addEventListener('keydown', closeIconKeyEsc);
 
 function closeIconDisplay(){
