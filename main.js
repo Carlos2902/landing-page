@@ -139,6 +139,19 @@ supermanImage.addEventListener('click', function(){
     openCenteredWindow('https://www.youtube.com/watch?v=T6DJcgm3wNY')
 })
 
+/*
+*   For further superheroes
+*/
+
+function attachClickEventToSuperheroImage(imageId, url) {
+    const imageElement = document.querySelector(imageId);
+    if (imageElement) {
+      imageElement.addEventListener('click', function() {
+        openCenteredWindow(url);
+      });
+    }
+  }
+
 
 const body = document.body;
 
