@@ -184,3 +184,29 @@ hoverElements.forEach((element) => {
     customCursor.classList.remove('hover-effect');
   });
 });
+
+
+function getRandomComicFunFact() {
+    const dcFunFacts = [
+      "In the 'Crisis on Infinite Earths' storyline, Barry Allen (The Flash) sacrifices himself to save the multiverse.",
+      "The 'Death of Superman' storyline saw Superman battling and ultimately being killed by the villain Doomsday.",
+      "Batman's back was broken by the villain Bane in the 'Knightfall' storyline.",
+    ];
+  
+    const marvelFunFacts = [
+      "The 'Infinity Gauntlet' storyline featured Thanos assembling all the Infinity Gems and becoming nearly omnipotent.",
+      "In 'The Clone Saga,' Spider-Man faced a clone of himself, leading to the introduction of Ben Reilly, the Scarlet Spider.",
+      "The 'Dark Phoenix Saga' in the X-Men comics revolves around Jean Grey becoming the immensely powerful and destructive Dark Phoenix.",
+    ];
+  
+    const isDC = Math.random() < 0.5; // Randomly choose between DC and Marvel
+  
+    const funFact = isDC
+      ? dcFunFacts[Math.floor(Math.random() * dcFunFacts.length)]
+      : marvelFunFacts[Math.floor(Math.random() * marvelFunFacts.length)];
+  
+    alert(funFact);
+  }
+  
+  getRandomComicFunFact();
+  
