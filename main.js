@@ -92,12 +92,26 @@ const closeIconBatman = document.querySelector('.modalBatman__content--close');
 
 batmanButton.addEventListener('click', modalDisplayBatman);
 
-function closeIconKeyEscBatman(event) {
+const batmanFunFacts = [
+    "Batman's secret identity is Bruce Wayne, a billionaire playboy and philanthropist.",
+    "The Bat-Signal is used by the Gotham City Police Department to call upon Batman for help.",
+    "Batman's utility belt is filled with various gadgets and tools to aid him in his crime-fighting activities.",
+    "Gotham City, where Batman operates, is often depicted as a dark and crime-ridden metropolis.",
+  ];
+  
+  function getRandomBatmanFunFact() {
+    const randomIndex = Math.floor(Math.random() * batmanFunFacts.length);
+    return batmanFunFacts[randomIndex];
+  }
+  
+  function closeIconKeyEscBatman(event) {
     if (event.key === 'Escape' || event.keyCode === 27) {
-        modalBatman.classList.add('hidden');
-        modalBatman.classList.remove('visible');
+      modalBatman.classList.add('hidden');
+      modalBatman.classList.remove('visible');
+      const batmanFunFact = getRandomBatmanFunFact();
+      alert('Fun fact! \n' + batmanFunFact);
     }
-}
+  }
 
 closeIconBatman.addEventListener('click',closeIconDisplayBatman);
 document.addEventListener('keydown', closeIconKeyEscBatman);
