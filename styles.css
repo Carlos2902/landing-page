@@ -606,3 +606,152 @@ max-width: 100%; /* Make the image as wide as its container */
     #radio-1nw,#radio-2nw,#radio-3nw{
         display: none;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+    .modalBatman{
+        width: 100%;
+        height: 100%;
+        background: rgb(0, 0, 0, 0.5);
+        position: absolute;
+        z-index: 4;
+    
+        display: grid;
+        place-items: center;
+    }
+    
+    .hiddenBatman{
+        /* display grid wins because of the specificity orders, so important is implemented */
+        display: none !important; 
+    }
+    
+    .visibleBatman{
+        display: grid   !important;
+    }
+    
+    
+    .modalBatman__content{
+        background: white;
+        width: 50%;
+        height: 50%;
+    
+        display: grid;
+        place-items: center;
+    
+        position: relative;  /*positioning context for the childs*/
+    }
+    
+    .modalBatman__content--close{
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+    }
+    
+    /* #radio-1,#radio-2,#radio-3{
+        display: none;
+    } */
+    
+    .modalBatman__content--slider{
+        /* rectangular shape */
+        width: 350px;
+        height: 260px;
+    
+        /* to get to see the cards beside one another in 3d animation*/
+        transform-style: preserve-3d;
+    }
+    
+    .cardsBatman{
+        position: relative;   /* To control child positioning */
+        width: 100%;
+        height: 100%;
+    
+        
+    }
+    
+    .modalBatman__content--slider{
+        /* rectangular shape */
+        width: 350px;
+        height: 260px;
+    
+        /* to get to see the cards beside one another in 3d animation*/
+        transform-style: preserve-3d;
+    }
+    .cardBatman{
+        background: var(--white);
+        position: absolute;
+        /* Center */
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+            /* transform elements, 0.4s duration, acceleration ease  */
+        transition: transform 0.4s ease;
+        cursor: pointer;
+        /* Center the content inside of card container */
+        display: grid;
+        place-items: center;
+    
+        height: 100%;
+        width: 50%;
+    }
+    
+    .cardBatman img{
+        max-width: 100%; /* Make the image as wide as its container */
+          max-height: 100%; /* Make the image as tall as its container */
+          width: auto; /* Automatically adjust the image width */
+          height: auto;
+        }
+        
+        #radio-1Batman:checked ~ .cardsBatman #card-1Batman,
+        #radio-2Batman:checked ~ .cardsBatman #card-2Batman,
+        #radio-3Batman:checked ~ .cardsBatman #card-3Batman{
+            transform: translateX(0) scale(1);
+            opacity: 1;
+            z-index: 1;
+        }
+        
+        #radio-1Batman:checked ~ .cardsBatman #card-2Batman,
+        #radio-2Batman:checked ~ .cardsBatman #card-3Batman,
+        #radio-3Batman:checked ~ .cardsBatman #card-1Batman{
+            transform: translateX(40%) scale(0.8);
+            opacity: 0.5;
+            z-index: 0;
+        }
+        
+        
+        #radio-1Batman:checked ~ .cardsBatman #card-3Batman,
+        #radio-2Batman:checked ~ .cardsBatman #card-1Batman,
+        #radio-3Batman:checked ~ .cardsBatman #card-2Batman{
+            transform: translateX(-40%) scale(0.8);
+            opacity: 0.5;
+            z-index: 0;
+        }
+    
+        #radio-1Batman,#radio-2Batman,#radio-3Batman{
+            display: none;
+        }
+
+
+
+        .custom-cursor {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff0000; 
+            border-radius: 50%;
+            pointer-events: none; 
+            transition: top 0.2s ease; 
+          }
+          
+          /* .hover-effect {
+            background-color: #00ff00; 
+          } */
