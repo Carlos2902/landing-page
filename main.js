@@ -3,7 +3,7 @@
 */
 
 const spidermanButton = document.querySelector('#spider-button1');
-const modalSpiderman = document.querySelector('.modalSpiderman');
+const modalSpiderman = document.querySelector('.modal');
 const closeIconSpiderman = document.querySelector('.modal__content--close');
 
 spidermanButton.addEventListener('click', modalDisplay);
@@ -205,7 +205,7 @@ function getRandomComicFunFact() {
       ? dcFunFacts[Math.floor(Math.random() * dcFunFacts.length)]
       : marvelFunFacts[Math.floor(Math.random() * marvelFunFacts.length)];
   
-    alert(funFact);
+    alert('Fun fact! \n' + funFact);
   }
   
   getRandomComicFunFact();
