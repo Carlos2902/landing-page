@@ -140,7 +140,7 @@ supermanImage.addEventListener('click', function(){
 })
 
 /*
-*   For further superheroes
+*   For future superheroes
 */
 
 function attachClickEventToSuperheroImage(imageId, url) {
@@ -155,6 +155,13 @@ function attachClickEventToSuperheroImage(imageId, url) {
 function setCursorColor(color) {
 document.body.style.cursor = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="fill: ${color};" role="img" aria-hidden="true" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" version="1.1" class="iconify iconify--twemoji" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></g><g id="SVGRepo_iconCarrier"> <path d="M512 128C283.008 128 96 315.008 96 544s187.008 416 416 416 416-187.008 416-416S740.992 128 512 128z m0 724.992c-194.064 0-352-157.936-352-352s157.936-352 352-352 352 157.936 352 352-157.936 352-352 352z m0-99.992a252.248 252.248 0 0 1-190.96-87.016c-6.016-6.992-19.6-6.288-25.512 1.704-6.992 6.016-6.288 19.6 1.704 25.512 50.8 59.256 135.112 95.8 216.768 95.8s165.968-36.544 216.768-95.8c6.992-6.016 19.6-6.72 25.512-1.704 6.016 6.992 6.72 19.6 1.704 25.512-49.88 46.208-114.552 72.992-183.968 72.992z" fill="#000000" /></g></svg>'), auto`;
 }
+
+
+
+/*
+*   Mouse Hovering features
+*
+*/
 
 
 const body = document.body;
