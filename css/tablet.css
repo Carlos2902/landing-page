@@ -1,58 +1,15 @@
-/* styles.css  tablet responsive*/
 
-@media (max-width: 930px) {
-    body {
-        font-size: 80%;
+  /* Estilos específicos para dispositivos móviles */
+  
+  @media only screen and (max-width: 768px) {
+    .main-content {
+      width: 100%; /* Ocupa el ancho completo en dispositivos móviles si es necesario */
+      height: auto; /* Ajusta según sea necesario */
     }
-
-    .navbar__content {
-        padding: 0 20px;
+  
+    .main-content div {
+      width: 100%; /* Ocupa el ancho completo de los elementos hijos en dispositivos móviles */
+      height: auto; /* Ajusta según sea necesario */
     }
-
-    .navbar__content img {
-        width: 40px;
-    }
-
-    .navbar__content ul {
-        width: 300px;
-    }
-
-    .main-content p:first-child {
-        font-size: 24px;
-    }
-
-    .main-content h1 {
-        font-size: 36px;
-    }
-
-    .main-content p:last-child {
-        font-size: 14px;
-    }
-
-    .footer div img {
-        width: 120px;
-        bottom: 15px;
-    }
-
-    .navbar__content ul li a {
-        font-size: 14px !important;
-    }
-}
-
-@media (min-width: 480px) and (max-width: 930px) {
-    .navbar__content {
-        padding: 0 10px;
-    }
-
-    .navbar__content img {
-        width: 30px;
-    }
-
-    .navbar__content ul {
-        width: 200px;
-    }
-}
-
-.navbar__content ul li {
-    font-size: 14px;
-}
+  }
+  

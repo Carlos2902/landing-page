@@ -250,7 +250,7 @@ body{
 }
 
 .footer div img{
-    width: 160px;
+    width: 60px;
     /* in order to get the function of the bottom */
     position: absolute;
     bottom: 30px;
