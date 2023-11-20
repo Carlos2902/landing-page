@@ -58,6 +58,9 @@ body{
     animation: 2s   navbar  0.5s  ease-in-out;
 }
 
+.toggle__menu {
+    display: none;
+}
 
 @keyframes navbar
 {

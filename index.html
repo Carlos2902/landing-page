@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./css/tablet.css" media="(min-width:   330px)">
+    <!-- Due to Cascade property, tablet goes first and then mobile -->
+    <link rel="stylesheet" href="./css/tablet.css" media="(max-width: 900px)"/>
+    <link rel="stylesheet" href="./css/mobile.css" media="(max-width: 580px)"/>
 
 </head>
 <body>
@@ -16,13 +18,20 @@
         <section class="container">
              <nav class="navbar">
                 <div class="navbar__content">
-                    <img src="https://i.ibb.co/MMmDPXN/lego.png" alt="logo">
-                    <ul>
-                        <li><a href="">EXCLUSIVES</a></li>
-                        <li><a href="">LATEST</a></li>
-                        <li><a href="">GIFT CARDS</a></li>
-                        <li><a href="https://www.yelp.ca/search?find_desc=Lego+Outlet&find_loc=Toronto%2C+ON">FIND A STORE</a></li>
-                    </ul>
+                    <!-- <img src="./icons/icon_menu.svg" alt="menu" class="menu"> -->
+
+                    <img src="https://i.ibb.co/MMmDPXN/lego.png" alt="logo" class="logo">
+                    <!-- encapsule ul in a div for responsive porpouses -->
+                    <div class="navbar__menu">
+                        <ul >
+                            <li><a href="">EXCLUSIVES</a></li>
+                            <li><a href="">LATEST</a></li>
+                            <li><a href="">GIFT CARDS</a></li>
+                            <li><a href="https://www.yelp.ca/search?find_desc=Lego+Outlet&find_loc=Toronto%2C+ON" class="">FIND A STORE</a></li>
+                        </ul>
+                    <!-- hiperlink for toggle menu, responsive: -->
+                    <a class="toggle__menu">Menu</a>
+                    </div>
                 </div>
              </nav>
 
