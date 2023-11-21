@@ -12,7 +12,7 @@ body, ul {
 
 .navbar {
   background-color: #ffd602;
-  color: #fff;
+  color: #000000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,58 +35,13 @@ body, ul {
 }
 
 .nav-links li a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
   color: #ffcc00;
-}
-
-/* Resetting default styles */
-
-.video-card {
-  width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  margin: 20px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
-
-.video-thumbnail img {
-  width: 100%;
-  height: auto;
-}
-
-.video-info {
-  padding: 15px;
-}
-
-.video-title {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-.video-description {
-  font-size: 0.9em;
-  color: #666;
-  margin-bottom: 15px;
-}
-
-.watch-button {
-  display: inline-block;
-  padding: 8px 15px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.watch-button:hover {
-  background-color: #0056b3;
 }
 
 /* Resetting default styles */
@@ -128,7 +83,7 @@ body, ul {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #fff;
+  color: #ffd602;
   z-index: 1;
 }
 
@@ -145,7 +100,7 @@ body, ul {
 .watch-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: rgb(177, 3, 3);
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
@@ -153,7 +108,7 @@ body, ul {
 }
 
 .watch-button:hover {
-  background-color: #0056b3;
+  background-color: #ffcc00;
 }
 
 .video-cards {
@@ -176,22 +131,42 @@ body, ul {
   border: none;
 }
 
-.game-button {
-  padding: 15px 30px;
-  font-size: 18px;
-  font-weight: bold;
-  border: none;
-  border-radius: 50%; /* Set border-radius to 50% for a round shape */
-  background-color: #3498db;
-  color: #fff;
+/* styles.css */
+.site-footer {
+  background-color: #ffd602;
+  color: #000;
+  padding: 20px 0;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-.game-button:hover {
-  background-color: #2980b9;
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.footer-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-links li a {
+  color: #000;
+  text-decoration: none;
 }
