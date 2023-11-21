@@ -170,3 +170,35 @@ body, ul {
   color: #000;
   text-decoration: none;
 }
+
+
+/* Responsive design using media queries */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* For screens smaller than 768px (e.g., tablets) */
+@media (max-width: 768px) {
+  .video-card {
+      width: calc(50% - 40px);
+  }
+}
+
+/* For screens smaller than 480px (e.g., mobile phones) */
+@media (max-width: 480px) {
+  .video-card {
+      width: 100%;
+      margin-right: 0;
+  }
+}
