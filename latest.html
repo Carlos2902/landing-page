@@ -1,74 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
+    <style>
+        .lego-button {
+            background-color: #FFD500;
+            border: none;
+            color: #000;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        .lego-button:hover {
+            background-color: #FFEA80;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .slider-images img {
+            display: none;
+            max-width: 100px;
+            max-height: 100px;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css">
     <!-- Due to Cascade property, tablet goes first and then mobile -->
-    <link rel="stylesheet" href="./css/tablet.css" media="(max-width: 900px)"/>
-    <link rel="stylesheet" href="./css/mobile.css" media="(max-width: 580px)"/>
+    <link rel="stylesheet" href="./css/tablet.css" media="(max-width: 900px)" />
+    <link rel="stylesheet" href="./css/mobile.css" media="(max-width: 580px)" />
 
 </head>
+
 <body>
-    
+
     <div class="page">
         <!-- Main content -->
         <section class="container">
-             <nav class="navbar">
+            <nav class="navbar">
                 <div class="navbar__content">
                     <!-- <img src="./icons/icon_menu.svg" alt="menu" class="menu"> -->
 
                     <img src="https://i.ibb.co/MMmDPXN/lego.png" alt="logo" class="logo">
                     <!-- encapsule ul in a div for responsive porpouses -->
                     <div class="navbar__menu">
-                        <ul >
+                        <ul>
                             <li><a href="">EXCLUSIVES</a></li>
                             <li><a href="latest.html">LATEST</a></li>
                             <li><a href="">GIFT CARDS</a></li>
-                            <li><a href="https://www.yelp.ca/search?find_desc=Lego+Outlet&find_loc=Toronto%2C+ON" class="">FIND A STORE</a></li>
+                            <li><a href="https://www.yelp.ca/search?find_desc=Lego+Outlet&find_loc=Toronto%2C+ON"
+                                    class="">FIND A STORE</a></li>
                         </ul>
-                    <!-- hiperlink for toggle menu, responsive: -->
-                    <a class="toggle__menu">Menu</a>
+                        <!-- hiperlink for toggle menu, responsive: -->
+                        <a class="toggle__menu">Menu</a>
                     </div>
                 </div>
-             </nav>
+            </nav>
 
-             <section class="main-content">
+            <section class="main-content">
                 <!-- <p>Design your</p>
                 <h1>Superhero!</h1>
                 <p>Design your Lego hero with ease! Create a one-of-a-kind superhero with our user-friendly tools. Mix and match Lego pieces, add accessories, and customize superpowers. Share your unique hero with the community. Start building today!</p> -->
-                    <h1 id="displayText">We want you to be creative.</h1>
+                <h1 id="displayText">We want you to be creative.</h1>
 
-                    <button onclick="changeText()">Show me more</button>
+                <button class="lego-button" onclick="changeText()">Show me more</button>
 
-                    <script src="indexLatest.js"></script>
-             </section>
+                <script src="indexLatest.js"></script>
+            </section>
 
-             <!-- Big image side-->
-             <section class="side-content">
-                 <div> </div>
+            <!-- Big image side-->
+            <section class="side-content">
+                <div> </div>
                 <p>Batman</p>
-                <img src="https://clipart.info/images/ccovers/1495576487batman-lego-with-gun-clipart-png.png" alt="superman" id="superman-image">
-            <!-- To add colour in one side of the section -->
-             </section>
+                <img src="https://clipart.info/images/ccovers/1495576487batman-lego-with-gun-clipart-png.png"
+                    alt="superman" id="superman-image">
+                <!-- To add colour in one side of the section -->
+            </section>
 
             <!-- Footer -->
             <section class="footer">
-                <div id="spider-button1">
-                    <img src="https://i.ibb.co/tKWqw8J/spiderman.png" alt="Spiderman">
+                <div class="slider-images" id="slider">
+                  <img src="https://i.ibb.co/tKWqw8J/spiderman.png" alt="Spiderman">
+                  <img src="https://i.ibb.co/Xzsdvgg/robin.png" alt="Robin">
+                  <img src="https://i.ibb.co/M18p91c/batman.webp" alt="Batman">
                 </div>
-
-                <div id="nightwing-button1">
-                    <img src="https://i.ibb.co/Xzsdvgg/robin.png" alt="Robbin">
-                </div>
-
-                <div id="batman-button1">
-                    <img src="https://i.ibb.co/M18p91c/batman.webp" alt="Batman">
-                </div>
-
-            </section>
+              </section>
+            
+              <script src="slider.js"></script>
 
 
         </section>
@@ -77,11 +110,11 @@
 
 
         <!-- Loader -->
-        <section class="loader"> 
-             <!--Animation when loading  -->
-             <div></div>
-             <div></div>
-             <div></div>
+        <section class="loader">
+            <!--Animation when loading  -->
+            <div></div>
+            <div></div>
+            <div></div>
         </section>
 
 
@@ -90,36 +123,40 @@
         <!-- Modal Spiderman-->
         <section class="modal hidden">
             <div class="modal__content">
-                <img  class="modal__content--close"  width="50" height="50" src="https://img.icons8.com/ios/50/cancel.png" alt="cancel"/>
-            
-                 <div class="modal__content--slider">
+                <img class="modal__content--close" width="50" height="50" src="https://img.icons8.com/ios/50/cancel.png"
+                    alt="cancel" />
+
+                <div class="modal__content--slider">
 
                     <!-- SPIDERMAN SLIDER -->
 
-                        <!-- radio buttom to allow the user to choose from different options -->
-                                                            <!-- checked in order to show the first input as default  -->
-                         <input type="radio" name="slider-1" id="radio-1" checked>
-                         <input type="radio" name="slider-1" id="radio-2">
-                         <input type="radio" name="slider-1" id="radio-3">
+                    <!-- radio buttom to allow the user to choose from different options -->
+                    <!-- checked in order to show the first input as default  -->
+                    <input type="radio" name="slider-1" id="radio-1" checked>
+                    <input type="radio" name="slider-1" id="radio-2">
+                    <input type="radio" name="slider-1" id="radio-3">
 
 
-                         <!-- Three superheroes cards -->
-                            <div class="cards">
-                            <!-- label in order to add descriptive labels   -->
-                            <label for="radio-1" id="card-1" class="card">
-                                <img src="https://static.platzi.com/media/public/uploads/spider-man-3_19f5c510-8059-4477-abf8-42249a5445b7.png" alt="">
+                    <!-- Three superheroes cards -->
+                    <div class="cards">
+                        <!-- label in order to add descriptive labels   -->
+                        <label for="radio-1" id="card-1" class="card">
+                            <img src="https://static.platzi.com/media/public/uploads/spider-man-3_19f5c510-8059-4477-abf8-42249a5445b7.png"
+                                alt="">
 
-                            </label>
+                        </label>
 
-                            <label for="radio-2" id="card-2" class="card">
-                                <img src="https://static.platzi.com/media/public/uploads/spider-man-2_b24c96b3-6d59-496f-815d-32b25eba0141.png" alt="">
-                            </label>
+                        <label for="radio-2" id="card-2" class="card">
+                            <img src="https://static.platzi.com/media/public/uploads/spider-man-2_b24c96b3-6d59-496f-815d-32b25eba0141.png"
+                                alt="">
+                        </label>
 
-                            <label for="radio-3" id="card-3" class="card">
-                                <img src="https://static.platzi.com/media/public/uploads/spider-man_db8af43d-b692-4986-a385-e645d286e142.png" alt="">
-                            </label>
-                            
-                            </div>
+                        <label for="radio-3" id="card-3" class="card">
+                            <img src="https://static.platzi.com/media/public/uploads/spider-man_db8af43d-b692-4986-a385-e645d286e142.png"
+                                alt="">
+                        </label>
+
+                    </div>
                 </div>
 
             </div>
@@ -129,36 +166,37 @@
         <!-- Modal Nightwing-->
         <section class="modalNw hidden">
             <div class="modalNw__content">
-                <img  class="modalNw__content--close"  width="50" height="50" src="https://img.icons8.com/ios/50/cancel.png" alt="cancel"/>
-            
-                 <div class="modalNw__content--slider">
+                <img class="modalNw__content--close" width="50" height="50"
+                    src="https://img.icons8.com/ios/50/cancel.png" alt="cancel" />
+
+                <div class="modalNw__content--slider">
 
                     <!-- Nightwing SLIDER -->
 
-                        <!-- radio buttom to allow the user to choose from different options -->
-                                                            <!-- checked in order to show the first input as default  -->
-                         <input type="radio" name="slider-1nw" id="radio-1nw" checked>
-                         <input type="radio" name="slider-1nw" id="radio-2nw">
-                         <input type="radio" name="slider-1nw" id="radio-3nw">
+                    <!-- radio buttom to allow the user to choose from different options -->
+                    <!-- checked in order to show the first input as default  -->
+                    <input type="radio" name="slider-1nw" id="radio-1nw" checked>
+                    <input type="radio" name="slider-1nw" id="radio-2nw">
+                    <input type="radio" name="slider-1nw" id="radio-3nw">
 
 
-                         <!-- Three superheroes cards -->
-                            <div class="cardsNw">
-                            <!-- label in order to add descriptive labels   -->
-                            <label for="radio-1nw" id="card-1nw" class="cardNw">
-                                <img src="https://i.ebayimg.com/images/g/flEAAOSwHX9d8nuS/s-l1600.jpg" alt="">
+                    <!-- Three superheroes cards -->
+                    <div class="cardsNw">
+                        <!-- label in order to add descriptive labels   -->
+                        <label for="radio-1nw" id="card-1nw" class="cardNw">
+                            <img src="https://i.ebayimg.com/images/g/flEAAOSwHX9d8nuS/s-l1600.jpg" alt="">
 
-                            </label>
+                        </label>
 
-                            <label for="radio-2nw" id="card-2nw" class="cardNw">
-                                <img src="https://bricker.info/images/minifigs/sh481.png" alt="">
-                            </label>
+                        <label for="radio-2nw" id="card-2nw" class="cardNw">
+                            <img src="https://bricker.info/images/minifigs/sh481.png" alt="">
+                        </label>
 
-                            <label for="radio-3nw" id="card-3nw" class="cardNw">
-                                <img src="https://i.ebayimg.com/images/g/gV8AAOSwDtxdW3Yk/s-l400.png" alt="">
-                            </label>
-                            
-                            </div>
+                        <label for="radio-3nw" id="card-3nw" class="cardNw">
+                            <img src="https://i.ebayimg.com/images/g/gV8AAOSwDtxdW3Yk/s-l400.png" alt="">
+                        </label>
+
+                    </div>
                 </div>
 
             </div>
@@ -167,36 +205,39 @@
         <!-- Modal Batman-->
         <section class="modalBatman hidden">
             <div class="modalBatman__content">
-                <img  class="modalBatman__content--close"  width="50" height="50" src="https://img.icons8.com/ios/50/cancel.png" alt="cancel"/>
-            
-                 <div class="modalBatman__content--slider">
+                <img class="modalBatman__content--close" width="50" height="50"
+                    src="https://img.icons8.com/ios/50/cancel.png" alt="cancel" />
+
+                <div class="modalBatman__content--slider">
 
                     <!-- Batman SLIDER -->
 
-                        <!-- radio buttom to allow the user to choose from different options -->
-                                                            <!-- checked in order to show the first input as default  -->
-                         <input type="radio" name="slider-1Batman" id="radio-1Batman" checked>
-                         <input type="radio" name="slider-1Batman" id="radio-2Batman">
-                         <input type="radio" name="slider-1Batman" id="radio-3Batman">
+                    <!-- radio buttom to allow the user to choose from different options -->
+                    <!-- checked in order to show the first input as default  -->
+                    <input type="radio" name="slider-1Batman" id="radio-1Batman" checked>
+                    <input type="radio" name="slider-1Batman" id="radio-2Batman">
+                    <input type="radio" name="slider-1Batman" id="radio-3Batman">
 
 
-                         <!-- Three superheroes cards -->
-                            <div class="cardsBatman">
-                            <!-- label in order to add descriptive labels   -->
-                            <label for="radio-1Batman" id="card-1Batman" class="cardBatman">
-                                <img src="https://static.wikia.nocookie.net/legodc/images/b/b2/LEGO_2019_Batman.png" alt="">
+                    <!-- Three superheroes cards -->
+                    <div class="cardsBatman">
+                        <!-- label in order to add descriptive labels   -->
+                        <label for="radio-1Batman" id="card-1Batman" class="cardBatman">
+                            <img src="https://static.wikia.nocookie.net/legodc/images/b/b2/LEGO_2019_Batman.png" alt="">
 
-                            </label>
+                        </label>
 
-                            <label for="radio-2Batman" id="card-2Batman" class="cardBatman">
-                                <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/lego-batman-people-q1yyR21-600.jpg" alt="">
-                            </label>
+                        <label for="radio-2Batman" id="card-2Batman" class="cardBatman">
+                            <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/lego-batman-people-q1yyR21-600.jpg"
+                                alt="">
+                        </label>
 
-                            <label for="radio-3Batman" id="card-3Batman" class="cardBatman">
-                                <img src="https://www.seekpng.com/png/detail/116-1168334_free-png-dark-batman-lego-png-images-transparent.png" alt="">
-                            </label>
-                            
-                            </div>
+                        <label for="radio-3Batman" id="card-3Batman" class="cardBatman">
+                            <img src="https://www.seekpng.com/png/detail/116-1168334_free-png-dark-batman-lego-png-images-transparent.png"
+                                alt="">
+                        </label>
+
+                    </div>
                 </div>
 
             </div>
@@ -204,4 +245,5 @@
     </div>
 </body>
 <script src="./main.js"></script>
+
 </html>
