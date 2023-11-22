@@ -31,10 +31,38 @@
             padding: 20px;
         }
 
+        .slider {
+            display: flex;
+            overflow: hidden;
+            width: 300px;
+            /* Set your desired width */
+            position: relative;
+        }
+
+        .slider-images {
+            display: flex;
+            transition: transform 0.5s ease;
+            /* Smooth slide transition */
+        }
+
         .slider-images img {
-            display: none;
-            max-width: 100px;
-            max-height: 100px;
+            width: 100%;
+            /* Adjust image width */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .control-btn {
+            cursor: pointer;
+            margin: 0 5px;
+            padding: 5px 10px;
+            background-color: #ccc;
         }
     </style>
     <meta charset="UTF-8">
@@ -94,15 +122,21 @@
 
             <!-- Footer -->
             <section class="footer">
-                <div class="slider-images" id="slider">
-                  <img src="https://i.ibb.co/tKWqw8J/spiderman.png" alt="Spiderman">
-                  <img src="https://i.ibb.co/Xzsdvgg/robin.png" alt="Robin">
-                  <img src="https://i.ibb.co/M18p91c/batman.webp" alt="Batman">
-                </div>
-              </section>
-            
-              <script src="slider.js"></script>
-
+                <div class="slider">
+                    <div class="slider-images">
+                      <img src="https://via.placeholder.com/300x150?text=Image+1" alt="Image 1">
+                      <img src="https://via.placeholder.com/300x150?text=Image+2" alt="Image 2">
+                      <img src="https://via.placeholder.com/300x150?text=Image+3" alt="Image 3">
+                    </div>
+                  </div>
+                
+                  <div class="slider-controls">
+                    <button class="control-btn" onclick="moveSlide(-1)">Previous</button>
+                    <button class="control-btn" onclick="moveSlide(1)">Next</button>
+                  </div>
+                
+                  <script src="slider.js"></script>
+            </section>
 
         </section>
 
