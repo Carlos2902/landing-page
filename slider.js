@@ -1,14 +1,15 @@
-let slideIndex = 0;
-const slides = document.querySelector('.slider-images');
+const sliderImages = document.querySelector('.slider-images');
 const images = document.querySelectorAll('.slider-images img');
-const totalSlides = images.length;
 
-function moveSlide(n) {
-  slideIndex += n;
-  if (slideIndex < 0) {
-    slideIndex = totalSlides - 1;
-  } else if (slideIndex >= totalSlides) {
-    slideIndex = 0;
+let index = 0;
+
+function changeSlide() {
+  index++;
+  if (index >= images.length) {
+    index = 0;
   }
-  slides.style.transform = `translateX(-${slideIndex * 300}px)`; // Adjust image width
+  const offset = -index * images[0].clientWidth;
+  sliderImages.style.transform = `translateX(${offset}px)`;
 }
+
+setInterval(changeSlide, 2000); // Change slide every 2 seconds (2000 milliseconds)
