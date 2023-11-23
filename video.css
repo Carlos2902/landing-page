@@ -9,7 +9,9 @@ body, ul {
   margin: 0;
   padding: 0;
 }
-
+.logo{
+  width: 50px;
+}
 .navbar {
   background-color: #ffd602;
   color: #000000;
@@ -35,7 +37,7 @@ body, ul {
 }
 
 .nav-links li a {
-  color: #000;
+  color: #d5040a;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -167,7 +169,7 @@ body, ul {
 }
 
 .footer-links li a {
-  color: #000;
+  color: #d5040a;
   text-decoration: none;
 }
 
