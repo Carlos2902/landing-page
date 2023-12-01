@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./styles.css">
     <!-- Due to Cascade property, tablet goes first and then mobile -->
     <link rel="stylesheet" href="./css/tablet.css" media="(max-width: 900px)"/>
@@ -12,7 +14,6 @@
 
 </head>
 <body>
-    
     <div class="page">
         <!-- Main content -->
         <section class="container">
@@ -24,13 +25,19 @@
                     <!-- encapsule ul in a div for responsive porpouses -->
                     <div class="navbar__menu">
                         <ul >
-                            <li><a href="index.html">EXCLUSIVES</a></li>
-                            <li><a href="latest.html">LATEST</a></li>
-                            <li><a href="videos.html">VIDEOS</a></li>
-                            <li><a href="https://www.yelp.ca/search?find_desc=Lego+Outlet&find_loc=Toronto%2C+ON" class="">FIND A STORE</a></li>
+                            <li><a href="./latest.html"><button type="button" class="btn btn-outline-danger">LATEST</button>
+                            </a></li>
+                            <li><a href="./latest.html"><button type="button" class="btn btn-outline-danger">EXCLUSIVES</button>
+                            </a></li>
+                            <li><a href="./video.html"><button type="button" class="btn btn-outline-danger">VIDEOS</button>
+                            </a></li>
+                            <li><a href="./latest.html"><button type="button" class="btn btn-outline-danger">STORE</button>
+                            </a></li>
+                            <!-- <li><a href="https://www.yelp.ca/search?find_desc=Lego+Outlet&find_loc=Toronto%2C+ON" class="">FIND A STORE</a></li> -->
                         </ul>
                     <!-- hiperlink for toggle menu, responsive: -->
-                    <a class="toggle__menu">Menu</a>
+                    <a><button type="button" class="btn btn-outline-danger toggle__menu">Menu</button> </a>
+                    
                     </div>
                 </div>
              </nav>
