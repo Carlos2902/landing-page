@@ -11,21 +11,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <!--JavaScript-->
 <script src="main.js"></script>
-<!--Jquery-->
-<script src="//code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
-    </script>
-    <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js">
-    </script>
 <style>
-  body{
-    background-image: url(card-soft-template-paper-report.jpg);
+body{
+    background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCACoASwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAUG/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AlAJ7YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/Z);
     background-size: cover;
     background-position: 50% 0;
-	  height: 100%;
-	  text-align: center;
+    height: 100%;
+    text-align: center;
   }
 
   a {text-decoration: none;}
@@ -33,6 +25,22 @@
 .page{
   max-width: 100%;
 }
+
+#panel, #flip {
+  width: 100px;
+  padding: 5px;
+  font-size: 22px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #FD0100;
+  border: solid 1px #FD0100;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+
 
 </style>
   </head class="fullpage">
@@ -379,7 +387,14 @@ height: 410px;
             ></a>
           </section>
           <!-- Section: Social media -->
-        </div>
+<div id="flip">About Us</div>
+<div id="panel">Lego is a globally renowned brand known for its iconic interlocking plastic
+   bricks that allow users to construct a myriad of shapes, structures, and imaginative designs.
+    Founded in 1932 by Ole Kirk Christiansen in Denmark, Lego initially produced wooden toys but later shifted focus to the now-famous plastic bricks in 1949. 
+  The name "Lego" is derived from the Danish words "leg godt," meaning "play well." 
+  The concept behind Lego lies in its versatility and ability to stimulate creativity and learning through play.</div>
+<!-- Grid container -->
+</div>
         <!-- Grid container -->
       
         <!-- Copyright -->
@@ -394,25 +409,28 @@ height: 410px;
   
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-      <script src="js/jquery.ripples.js"></script>
-      <script src="video.js"></script>
-
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+     
+     
       <script>
-        $('body').ripples({
-	resolution: 512,
-	dropRadius: 20,
-	perturbance: 0.04,
-
-          
-      
-});
-</script>
-
-
-<script>
-  
-</script>
+       //slide up
+       $(document).ready(function(){
+         $("button").click(function(){
+           $(".card-text").css("color", "red")
+             .slideUp(2000)
+             .slideDown(2000);
+         });
+       });
+       </script>
+ 
+ 
+ <script> 
+ //slide_toggle
+   $(document).ready(function(){
+     $("#flip").click(function(){
+       $("#panel").slideToggle("slow");
+     });
+   });
+   </script>
     </body>
   </html>
