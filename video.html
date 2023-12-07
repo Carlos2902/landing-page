@@ -11,20 +11,48 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <!--JavaScript-->
 <script src="main.js"></script>
+<!--Jquery-->
+<script src="//code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+  body{
+    background-image: url(card-soft-template-paper-report.jpg);
+    background-size: cover;
+    background-position: 50% 0;
+	  height: 100%;
+	  text-align: center;
+  }
+
+  a {text-decoration: none;}
+
+.page{
+  max-width: 100%;
+}
+</style>
   </head>
   <body>
 
+    <nav
+      class="nav justify-content-center bg-warning "
+    >
+      <a class="nav-link active text-dark" href="#" aria-current="page"
+        >Help</a
+      >
+      <a class="nav-link text-dark" href="#">SignUp</a>
+      <a class="nav-link text-dark" href="#">Account</a>
+    </nav>
+    
      <!-- Container wrapper -->
 <div class="container-fluid">
     <div class="page">
         <!-- Nav tabs -->
-        <ul class="nav navbar-expand-lg nav-tabs bg-warning text-danger"  id="navId" role="tablist">
-            <img style="width: 50px;"  src="https://i.ibb.co/MMmDPXN/lego.png" alt="logo" class="logo">
+        <ul class="nav navbar-expand-lg text-warning"  id="navId" role="tablist">
+            <img style="width: 100px;"  src="https://i.ibb.co/MMmDPXN/lego.png" alt="logo" class="logo">
             <li class="nav-item">
-                <a href="#tab1Id" class="nav-link active text-danger" data-bs-toggle="tab" aria-current="page">HOME</a>
+                <a href="#tab1Id" class="nav-link active text-warning" data-bs-toggle="tab" aria-current="page">HOME</a>
             </li>
             <li class="nav-item dropdown text-dark">
-                <a class="nav-link dropdown-toggle text-danger" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">MORE</a>
+                <a class="nav-link dropdown-toggle text-warning" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">MORE</a>
                  <!-- Navbar dropdown -->
                 <div class="dropdown-menu">
                     <!--links -->
@@ -35,10 +63,10 @@
                 </div>
             </li>
             <li class="nav-item" role="presentation">
-                <a href="#tab5Id" class="nav-link text-danger" data-bs-toggle="tab">ANIMATIONS</a>
+                <a href="#tab5Id" class="nav-link text-warning" data-bs-toggle="tab">ANIMATIONS</a>
             </li>
             <li class="nav-item" role="presentation">
-                <a href="#" class="nav-link disabled text-danger" data-bs-toggle="tab">STORE</a>
+                <a href="#" class="nav-link disabled text-warning" data-bs-toggle="tab">STORE</a>
             </li>
         </ul>
          <!-- Tab panes -->
@@ -58,25 +86,24 @@
         
     </div>
 </div>
-
 <!-- Jumbotron -->
-<div class="p-5 mt-3 mb-3 text-center bg-image" style="
-    background-image: url('https://www.zapper.co.uk/wp-content/uploads/2019/12/the-history-of-lego.jpg');
-    height: 410px;
+<div class="p-5 text-center bg-image" style="
+    background-image: url('pngtree-lego-streetbuilding-project-is-shown-in-front-of-some-buildings-picture-image_3421933.jpg');
+    height: 400px;
   ">
-  <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+  <div class="mask">
     <div class="d-flex justify-content-center align-items-center h-100">
       <div class="text-white">
         <h1 class="mb-3">Checkout all our latest videos</h1>
         <h4 class="mb-3">Watch videos and follow along as you create your lego sets, confusion about lego blocks stops here.</h4>
-        <a class="btn btn-outline-warning btn-lg" href="#!" role="button">Watch Now</a>
       </div>
     </div>
   </div>
 </div>
 <!-- Jumbotron -->
+
 <div class="container">
-    <div class="row row-cols-1 row-cols-md-3">
+    <div class="row row-cols-1 row-cols-md-3 mt-5">
         <div class="col mb-4">
           <!-- Card -->
           <div class="card">
@@ -171,6 +198,115 @@
       </div>
     </div>
 
+    <!-- Jumbotron -->
+<div class="p-5 mt-3 mb-3 text-center bg-image" style="
+background-image: url('https://www.zapper.co.uk/wp-content/uploads/2019/12/the-history-of-lego.jpg');
+height: 410px;
+">
+<div class="mask">
+<div class="d-flex justify-content-center align-items-center h-100">
+  <div class="text-white">
+  </div>
+</div>
+</div>
+</div>
+<!-- Jumbotron -->
+
+<div class="container">
+  <h1 class="text-center text-warning mt-5">Top Picks</h1>
+  <div class="row row-cols-1 row-cols-md-3 mt-5">
+      <div class="col mb-4">
+        <!-- Card -->
+        <div class="card">
+    
+          <!--Card image-->
+          <div class="view overlay">
+            <iframe width="400" height="315" src="https://www.youtube.com/embed/c-Wu953f1wQ?si=ZhLZAtlylr9U_m2E" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <a href="#!">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+    
+          <!--Card content-->
+          <div class="card-body">
+    
+            <!--Title-->
+            <h4 class="card-title">Welcome to lego Video land</h4>
+            <!--Text-->
+            <p class="card-text">Here you can watch videos and follow your favorite lego builders.</p>
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+            <button type="button" class="btn btn-outline-danger btn-md">Watch Video</button>
+    
+          </div>
+    
+        </div>
+        <!-- Card -->
+      </div>
+      <div class="col mb-4">
+        <!-- Card -->
+        <div class="card">
+    
+          <!--Card image-->
+          <div class="view overlay">
+            <iframe width="414" height="315" src="https://www.youtube.com/embed/GeKTrjGdJ2E?si=WH7NhWiQCw4WpX3K" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <a href="#!">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+    
+          <!--Card content-->
+          <div class="card-body">
+    
+            <!--Title-->
+            <h4 class="card-title">Night's Owl</h4>
+            <!--Text-->
+            <p class="card-text">From the majestic pyramids of Egypt to the intriguing rituals of lost cultures</p>
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+            <button type="button" class="btn btn-outline-danger btn-md">Watch Video</button>
+    
+          </div>
+    
+        </div>
+        <!-- Card -->
+      </div>
+      <div class="col mb-4">
+        <!-- Card -->
+        <div class="card">
+    
+          <!--Card image-->
+          <div class="view overlay">
+              <iframe width="414" height="315" src="https://www.youtube.com/embed/TEZzRLfGPM4?si=b8M2mJnjxARdHq7o" 
+              title="YouTube video player" frameborder="0"
+               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <a href="#!">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+    
+          <!--Card content-->
+          <div class="card-body">
+    
+            <!--Title-->
+            <h4 class="card-title">Cooking Techniques Unveiled</h4>
+            <!--Text-->
+            <p class="card-text">From vibrant parrots to elusive jaguars, this video takes you deep.</p>
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+            <button type="button" class="btn btn-outline-danger btn-md">Watch Video</button>
+    
+          </div>
+    
+        </div>
+        <!-- Card -->
+      </div>
+    </div>
+  </div>
+
+  <!--footer-->
     <footer class="bg-body-tertiary text-center">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
@@ -240,7 +376,7 @@
         <!-- Grid container -->
       
         <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        <div class="text-center p-3 bg-warning">
           © 2023 Copyright:
           <a class="text-body" href="https://mdbootstrap.com/">All Rights Reserved.</a>
         </div>
@@ -248,5 +384,18 @@
       </footer>
   
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+      <script src="js/jquery.ripples.js"></script>
+
+      <script>
+        $('body').ripples({
+	resolution: 512,
+	dropRadius: 20,
+	perturbance: 0.04,
+});
+
+      </script>
     </body>
   </html>
