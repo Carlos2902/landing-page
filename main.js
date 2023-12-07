@@ -238,3 +238,50 @@ function getRandomComicFunFact() {
 
 getRandomComicFunFact();
 
+
+
+//jquery animations
+
+$(document).ready(function () {
+    // Animation 1: Rotate the logo
+    $(".logo").click(function () {
+        $(this).animate({ rotation: 360 }, {
+            duration: 1000,
+            step: function (now, fx) {
+                $(this).css('transform', 'rotate(' + now + 'deg)');
+            }
+        });
+    });
+
+    // Animation 2: Scale the buttons
+    $(".navbar__menu button").hover(function () {
+        $(this).animate({ fontSize: '1.2em' }, 200);
+    }, function () {
+        $(this).animate({ fontSize: '1em' }, 200);
+    });
+
+    // Animation 3: Fade in/out Superman image
+    $("#superman-image").click(function () {
+        $(this).fadeOut(500).fadeIn(500);
+    });
+
+    // Animation 4: Scale the children of the section with class main-content (except for h1)
+    $(".main-content > :not(h1)").hover(function () {
+        $(this).animate({ fontSize: '1.2em' }, 200);
+    }, function () {
+        $(this).animate({ fontSize: '1em' }, 200);
+    });
+
+    // Animation 5: Fade in/out the class modal__content on click
+    $(".modal__content").click(function () {
+        $(this).fadeOut(500).fadeIn(500);
+    });
+
+  
+    // Animation 7: (Move element p)
+    $(".main-content p").click(function () {
+        $(this).animate({ left: '50px' }, 500, function () {
+            $(this).animate({ left: '0' }, 500);
+        });
+    });
+});
