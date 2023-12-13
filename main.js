@@ -285,3 +285,50 @@ $(document).ready(function () {
         });
     });
 });
+
+
+
+// JQUERY - Local Storage
+$(document).ready(function () {
+    // Function to save data to local storage
+    function saveToLocalStorage(item) {
+        // Check if there's an existing array in local storage
+        var savedItems = JSON.parse(localStorage.getItem("savedItems")) || [];
+
+        // Add the new item to the array
+        savedItems.push(item);
+
+        // Save the updated array back to local storage
+        localStorage.setItem("savedItems", JSON.stringify(savedItems));
+    }
+
+    // Event listener for navbar button clicks
+    $(".navbar__menu button").click(function () {
+        // Get the text content of the clicked button
+        var buttonText = $(this).text();
+
+        // Save the button text to local storage
+        saveToLocalStorage(buttonText);
+    });
+
+    // Event listener for modal card clicks (Spiderman)
+    $(".modal .cards label").click(function () {
+        // Get the image source URL of the clicked card
+        var imgSrc = $(this).find("img").attr("src");
+
+        // Save the image source URL to local storage
+        saveToLocalStorage(imgSrc);
+    });
+
+    // Event listener for modalNw card clicks (Nightwing)
+    $(".modalNw .cardsNw label").click(function () {
+        var imgSrcNw = $(this).find("img").attr("src");
+        saveToLocalStorage(imgSrcNw);
+    });
+
+    // Event listener for modalBatman card clicks (Batman)
+    $(".modalBatman .cardsBatman label").click(function () {
+        var imgSrcBatman = $(this).find("img").attr("src");
+        saveToLocalStorage(imgSrcBatman);
+    });
+});
