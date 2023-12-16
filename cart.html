@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Due to Cascade property, tablet goes first and then mobile -->
+    <link rel="stylesheet" href="./css/tablet.css" media="(max-width: 900px)"/>
+    <link rel="stylesheet" href="./css/mobile.css" media="(max-width: 580px)"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+<body>
+    <div class="page">
+        <!-- Main content -->
+        <section class="container">
+             <nav class="navbar">
+                <div class="navbar__content">
+                    <!-- <img src="./icons/icon_menu.svg" alt="menu" class="menu"> -->
+
+                    <img src="https://i.ibb.co/MMmDPXN/lego.png" alt="logo" class="logo">
+                    <!-- encapsule ul in a div for responsive porpouses -->
+                    <div class="navbar__menu">
+                        <ul >
+                            <li><a href="./latest.html"><button type="button" class="btn btn-outline-danger">LATEST</button>
+                            </a></li>
+                            <li><a href="./latest.html"><button type="button" class="btn btn-outline-danger">EXCLUSIVES</button>
+                            </a></li>
+                            <li><a href="./video.html"><button type="button" class="btn btn-outline-danger">VIDEOS</button>
+                            </a></li>
+                            <li><a href="./latest.html"><button type="button" class="btn btn-outline-danger">STORE</button>
+                            </a></li>
+                            <li><a href="./cart.html"><button type="button" class="btn btn-outline-danger">CART</button>
+                            </a></li>
+                        </ul>
+                    <!-- hiperlink for toggle menu, responsive: -->
+                    <a><button type="button" class="btn btn-outline-danger toggle__menu">Menu</button> </a>
+                    
+                    </div>
+                </div>
+             </nav>
+
+             <section class="main-content">
+                <h1 class="card-title mt-5"></h1>
+                <h1 class="card-title mt-5"></h1>
+                <h1 class="card-title mt-5">Your bag</h1>
+                <ul id="cartItemsList"></ul>
+            </section>
+</body>
+<script src="./cartLoader.js"></script>
+</html>

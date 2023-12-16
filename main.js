@@ -146,26 +146,56 @@ function openCenteredWindow(url) {
 }
 
 
-const spidermanImage = document.querySelector('#card-1')
+const spidermanImage = document.querySelector('#card-1');
+let clickCountss = 0;
+
 spidermanImage.addEventListener('click', function () {
-    openCenteredWindow('https://www.youtube.com/watch?v=JfVOs4VSpmA');
-})
+    clickCountss++;
 
-const robinImage = document.querySelector('#card-1nw')
+    if (clickCountss === 2) {
+        openCenteredWindow('https://www.youtube.com/watch?v=JfVOs4VSpmA');
+        clickCountss = 0; 
+    }
+});
+
+
+const robinImage = document.querySelector('#card-1nw');
+let clickCountr = 0;
+
 robinImage.addEventListener('click', function () {
-    openCenteredWindow('https://www.youtube.com/watch?v=vz3YjAF5mrQ');
-})
+    clickCountr++;
 
-const batmanImage = document.querySelector('#card-1Batman')
+    if (clickCountr === 2) {
+        openCenteredWindow('https://www.youtube.com/watch?v=vz3YjAF5mrQ');
+        clickCountr = 0; 
+    }
+});
+
+const batmanImage = document.querySelector('#card-1Batman');
+let clickCountb = 0;
+
 batmanImage.addEventListener('click', function () {
-    openCenteredWindow('https://www.youtube.com/watch?v=EXeTwQWrcwY')
-})
+    clickCountb++;
+
+    if (clickCountb === 2) {
+        openCenteredWindow('https://www.youtube.com/watch?v=EXeTwQWrcwY');
+        clickCountb = 0; 
+    }
+});
 
 
-const supermanImage = document.querySelector('#superman-image')
+
+const supermanImage = document.querySelector('#superman-image');
+let clickCounts = 0;
+
 supermanImage.addEventListener('click', function () {
-    openCenteredWindow('https://www.youtube.com/watch?v=T6DJcgm3wNY')
-})
+    clickCounts++;
+
+    if (clickCounts === 2) {
+        openCenteredWindow('https://www.youtube.com/watch?v=T6DJcgm3wNY');
+        clickCounts = 0; 
+    }
+});
 
 /*
 *   For future superheroes
@@ -302,17 +332,9 @@ $(document).ready(function () {
         localStorage.setItem("savedItems", JSON.stringify(savedItems));
     }
 
-    // Event listener for navbar button clicks
-    $(".navbar__menu button").click(function () {
-        // Get the text content of the clicked button
-        var buttonText = $(this).text();
-
-        // Save the button text to local storage
-        saveToLocalStorage(buttonText);
-    });
-
     // Event listener for modal card clicks (Spiderman)
-    $(".modal .cards label").click(function () {
+    $(".modal .cards label").dblclick(function () {
+        alert('Added to Cart!')
         // Get the image source URL of the clicked card
         var imgSrc = $(this).find("img").attr("src");
 
@@ -321,14 +343,40 @@ $(document).ready(function () {
     });
 
     // Event listener for modalNw card clicks (Nightwing)
-    $(".modalNw .cardsNw label").click(function () {
+    $(".modalNw .cardsNw label").dblclick(function () {
+        alert('Added to Cart!')
         var imgSrcNw = $(this).find("img").attr("src");
         saveToLocalStorage(imgSrcNw);
     });
 
     // Event listener for modalBatman card clicks (Batman)
-    $(".modalBatman .cardsBatman label").click(function () {
+    $(".modalBatman .cardsBatman label").dblclick(function () {
+        alert('Added to Cart!')
         var imgSrcBatman = $(this).find("img").attr("src");
         saveToLocalStorage(imgSrcBatman);
     });
+
 });
+
+
+$(document).ready(function() {
+    $('.addToCartButton').on('click', function() {
+        const parentLabel = $(this).closest('label').attr('for');
+        const imageUrl = $(this).siblings('img').attr('src');
+        saveImageAndParentToLocalStorage(imageUrl, parentLabel);
+    });
+
+    // Function to save image and parent label to local storage
+    function saveImageAndParentToLocalStorage(imageUrl, parentLabel) {
+        if (typeof Storage !== 'undefined') {
+            let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            cartItems.push({ imageUrl: imageUrl, parentLabel: parentLabel });
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+        } else {
+            alert('Sorry, your browser does not support local storage.');
+        }
+    }
+});
+
+
+
